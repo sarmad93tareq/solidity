@@ -1,0 +1,26 @@
+// Solidity program to
+// demonstrate abi encoding
+pragma solidity >=0.4.22 <0.7.0;
+
+// Creating a contract
+contract Storage
+{
+	// Declaring a state variable
+	uint256 number;
+
+	// Defining a function
+	// to store the number
+	function store(uint256 num) public
+	{
+		number = num;
+	}
+
+	// Defining a function to
+	// send back or return the
+	// stored number
+	function retrieve() public
+			view returns (uint256)
+	{
+		return number;
+	}
+}
